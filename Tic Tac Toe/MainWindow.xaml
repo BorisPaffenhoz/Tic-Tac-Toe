@@ -6,25 +6,26 @@
         xmlns:local="clr-namespace:Tic_Tac_Toe"
         mc:Ignorable="d"
         Title="Tic Tac Toe" Height="500" Width="500">
-    <Grid>
+    <Grid x:Name="Grid" Background="Gainsboro" ShowGridLines="True">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="166*"/>
-            <ColumnDefinition Width="166*"/>
-            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="165"/>
+            <ColumnDefinition Width="165"/>
+            <ColumnDefinition Width="165"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="155"/>
+            <RowDefinition Height="155"/>
         </Grid.RowDefinitions>
-        <Button Content="Button_1_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157"/>
-        <Button Content="Button_1_2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Grid.Column="1"/>
-        <Button Content="Button_1_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Grid.Column="2"/>
-        <Button Content="Button_2_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Margin="0,156,0,0" Grid.RowSpan="2"/>
-        <Button Content="Button_2_2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Margin="0,156,0,0" Grid.RowSpan="2" Grid.Column="1"/>
-        <Button Content="Button_2_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Grid.RowSpan="2" Grid.Column="2" Grid.Row="1"/>
-        <Button Content="Button_3_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Margin="0,155,0,0" Grid.RowSpan="2" Grid.Row="1"/>
-        <Button Content="Button_3_2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Margin="0,0,0,-1" Grid.Row="2" Grid.Column="1"/>
-        <Button Content="Button_3_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Height="157" Margin="0,155,0,0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+        <Button Content="Button_0_0" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_0_1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_0_2" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_1_0" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_1_1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_1_2" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_2_0" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_2_1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="165" Height="155"/>
+        <Button Content="Button_2_2" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="165" Height="155"/>
+
     </Grid>
 </Window>
