@@ -25,6 +25,8 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
+       //Button Farbe wird durchs anklicken geaendert
+        
         private void OnClick1(object sender, RoutedEventArgs e)
         {
             Button_0_0.Background = Brushes.Pink;
