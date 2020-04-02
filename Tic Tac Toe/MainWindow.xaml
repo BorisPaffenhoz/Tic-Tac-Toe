@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tic_Tac_Toe"
         mc:Ignorable="d"
         Title="Tic Tac Toe" Height="500" Width="500">
-    <Grid x:Name="Grid" Background="Gainsboro" ShowGridLines="True">
+    <Grid x:Name="Grid" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -17,17 +17,23 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="Button_0_0" Content="x" Grid.Column="0"  Grid.Row="0"/>
-        <Button x:Name="Button_0_1" Content="x" Grid.Column="1"  Grid.Row="0"/>
-        <Button x:Name="Button_0_2" Content="x" Grid.Column="2"  Grid.Row="0"/>
+        <Button x:Name="Button_0_0" Content="-" Grid.Column="0"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70" 
+                Click="OnClick1" ClickMode="Hover"/>
+        
+        <Button x:Name="Button_0_1" Content="-" Grid.Column="1"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9E7EE" FontSize="70"/>
+        <Button x:Name="Button_0_2" Content="-" Grid.Column="2"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
 
-        <Button x:Name="Button_1_0" Content="x" Grid.Column="0"  Grid.Row="1"/>
-        <Button x:Name="Button_1_1" Content="x" Grid.Column="1"  Grid.Row="1"/>
-        <Button x:Name="Button_1_2" Content="x" Grid.Column="2"  Grid.Row="1"/>
+        <Button x:Name="Button_1_0" Content="-" Grid.Column="0"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
+        <Button x:Name="Button_1_1" Content="-" Grid.Column="1"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
+        <Button x:Name="Button_1_2" Content="-" Grid.Column="2"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
 
-        <Button x:Name="Button_2_0" Content="x" Grid.Column="0"  Grid.Row="2"/>
-        <Button x:Name="Button_2_1" Content="x" Grid.Column="1"  Grid.Row="2"/>
-        <Button x:Name="Button_2_2" Content="x" Grid.Column="2"  Grid.Row="2"/>
+        <Button x:Name="Button_2_0" Content="-" Grid.Column="0"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
+        <Button x:Name="Button_2_1" Content="-" Grid.Column="1"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
+        <Button x:Name="Button_2_2" Content="-" Grid.Column="2"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
+
+
+            
+        
 
 
     </Grid>
