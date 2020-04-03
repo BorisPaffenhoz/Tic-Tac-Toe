@@ -17,16 +17,20 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <!--Button Funktion erste Zeile-->
         <Button x:Name="Button_0_0" Content="-" Grid.Column="0"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70" 
                 Click="OnClick1" ClickMode="Hover"/>
         
         <Button x:Name="Button_0_1" Content="-" Grid.Column="1"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9E7EE" FontSize="70"/>
         <Button x:Name="Button_0_2" Content="-" Grid.Column="2"  Grid.Row="0" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
-
+        
+        <!--Button Funktion zweite Zeile-->
         <Button x:Name="Button_1_0" Content="-" Grid.Column="0"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
         <Button x:Name="Button_1_1" Content="-" Grid.Column="1"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
         <Button x:Name="Button_1_2" Content="-" Grid.Column="2"  Grid.Row="1" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
 
+        <!--Button Funktion dritte Zeile-->
         <Button x:Name="Button_2_0" Content="-" Grid.Column="0"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
         <Button x:Name="Button_2_1" Content="-" Grid.Column="1"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
         <Button x:Name="Button_2_2" Content="-" Grid.Column="2"  Grid.Row="2" Background="#FF00A8C6" BorderThickness="5" Foreground="#FFF9F2E7" FontSize="70"/>
