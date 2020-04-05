@@ -31,9 +31,9 @@ namespace Tic_Tac_Toe
 
         private void Button_0_0_Click(object sender, RoutedEventArgs e)
         {
-            var bisherigerVordergrund = Button_0_0.Foreground;
-            Button_0_0.Foreground = Button_0_0.Background;
-            Button_0_0.Background = bisherigerVordergrund;
+            var bisherigerVordergrund = button_0_0.Foreground;
+            button_0_0.Foreground = button_0_0.Background;
+            button_0_0.Background = bisherigerVordergrund;
         }
     }
 }
