@@ -27,9 +27,13 @@ namespace Tic_Tac_Toe
 
        //Button Farbe wird durchs anklicken geaendert
         
-        private void OnClick1(object sender, RoutedEventArgs e)
+        
+
+        private void Button_0_0_Click(object sender, RoutedEventArgs e)
         {
-            Button_0_0.Background = Brushes.Pink;
+            var bisherigerVordergrund = Button_0_0.Foreground;
+            Button_0_0.Foreground = Button_0_0.Background;
+            Button_0_0.Background = bisherigerVordergrund;
         }
     }
 }
