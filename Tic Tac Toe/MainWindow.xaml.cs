@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Data;
 
 namespace Tic_Tac_Toe
 {
@@ -20,20 +22,36 @@ namespace Tic_Tac_Toe
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool _istErsterSpielerAmZug = true;
         public MainWindow()
         {
             InitializeComponent();
+
+            lblHinweis.Content = "Spieler 1";
         }
 
-       //Button Farbe wird durchs anklicken geaendert
-        
-        
+        //Button Farbe wird durchs anklicken geaendert
+
+       public  int i = 0;
 
         private void Button_0_0_Click(object sender, RoutedEventArgs e)
         {
-            var bisherigerVordergrund = button_0_0.Foreground;
-            button_0_0.Foreground = button_0_0.Background;
-            button_0_0.Background = bisherigerVordergrund;
+            Button geklickterButtton = (Button)sender;
+
+            if(_istErsterSpielerAmZug)
+            { 
+                geklickterButtton.Content = "x";
+                _istErsterSpielerAmZug = false;
+            }
+
+            else
+            {
+                geklickterButtton.Content = "o";
+                _istErsterSpielerAmZug = true;
+            }
+
+
+
         }
     }
 }
