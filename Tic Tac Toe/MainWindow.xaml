@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tic_Tac_Toe"
         mc:Ignorable="d"
-        Title="Tic Tac Toe" Height="500" Width="500">
+        Title="Tic Tac Toe" Height="500" Width="500" Loaded="Window_Loaded">
         
 
     <Window.Resources>
@@ -17,7 +17,7 @@
             <Setter Property="FontSize" Value="70"/>
         </Style>
     </Window.Resources>
-    <Grid x:Name="Grid">
+    <Grid x:Name="Spielfeld">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="82*"/>
             <ColumnDefinition Width="82*"/>
