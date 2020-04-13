@@ -34,7 +34,7 @@ namespace Tic_Tac_Toe
 
        public  int i = 0;
 
-        private void Button_0_0_Click(object sender, RoutedEventArgs e)
+        private void Kaestchen_Click(object sender, RoutedEventArgs e)
         {
             Button geklickterButtton = (Button)sender;
 
