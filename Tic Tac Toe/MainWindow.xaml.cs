@@ -23,11 +23,12 @@ namespace Tic_Tac_Toe
     public partial class MainWindow : Window
     {
         private bool _istErsterSpielerAmZug = true;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            lblHinweis.Content = "Spieler 1";
+           
         }
 
         //Button Farbe wird durchs anklicken geaendert
@@ -37,6 +38,12 @@ namespace Tic_Tac_Toe
         private void Kaestchen_Click(object sender, RoutedEventArgs e)
         {
             Button geklickterButtton = (Button)sender;
+
+            if(geklickterButtton.Content!= null && geklickterButtton.Content.ToString() != "")
+            {
+                MessageBox.Show("Kästchen ist bereits belegt! Versuch ein anderes Kästchen anzuklicken");
+                return;
+            }
 
             if(_istErsterSpielerAmZug)
             { 
