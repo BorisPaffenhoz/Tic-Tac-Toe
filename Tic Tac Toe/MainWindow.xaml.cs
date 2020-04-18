@@ -45,6 +45,12 @@ namespace Tic_Tac_Toe
                 _istErsterSpielerAmZug = true;
             }
 
+            if (button_0_0.Content!=null)
+            {
+                MessageBox.Show("Hallo Boris"+"{ button_0_0}","Hinweis");
+            }
+           
+
             
             if(geklickterButtton.Content!= null && geklickterButtton.Content.ToString() != "")
             {
@@ -64,6 +70,10 @@ namespace Tic_Tac_Toe
                 _istErsterSpielerAmZug = true;
             }
 
+            
+
+            
+
         }
 
         private bool IstSpielfeldVoll()
@@ -80,6 +90,8 @@ namespace Tic_Tac_Toe
 
             return true;
         }
+
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -100,5 +112,10 @@ namespace Tic_Tac_Toe
             button_2_1.Content = string.Empty;
             button_2_2.Content = string.Empty;
         }
+
+        //private void Aktiv()
+        //{
+        //    button_0_0.Content;
+        //}
     }
 }
