@@ -71,6 +71,8 @@ namespace Tic_Tac_Toe
                 
                 if (_istErsterSpielerAmZug)
                 {
+                    
+
                     MessageBox.Show("Spieler 1 (o) hat gewonnen!");
                 }
 
@@ -85,6 +87,8 @@ namespace Tic_Tac_Toe
             
 
         }
+
+        
 
         private bool StarteSpielNeu()
         {
@@ -104,16 +108,19 @@ namespace Tic_Tac_Toe
             //Gewinn Reihen Definition Horizontal
             if (IstGleicherSpielstein(button_0_0, button_0_1, button_0_2))
             {
+                HebeKaestchenHervor(button_0_0, button_0_1, button_0_2);
                 return true;
             }
 
             else if (IstGleicherSpielstein(button_1_0, button_1_1, button_1_2))
             {
+                HebeKaestchenHervor(button_1_0, button_1_1, button_1_2);
                 return true;
             }
 
             else if (IstGleicherSpielstein(button_2_0, button_2_1, button_2_2))
             {
+                HebeKaestchenHervor(button_2_0, button_2_1, button_2_2);
                 return true;
             }
 
@@ -121,16 +128,19 @@ namespace Tic_Tac_Toe
             //Gewinn Reichen Definition Vertikal
             else if (IstGleicherSpielstein(button_0_0, button_1_0, button_2_0))
             {
+                HebeKaestchenHervor(button_0_0, button_1_0, button_2_0);
                 return true;
             }
 
             else  if (IstGleicherSpielstein(button_0_1, button_1_1, button_2_1))
             {
+                HebeKaestchenHervor(button_0_1, button_1_1, button_2_1);
                 return true;
             }
 
             else if (IstGleicherSpielstein(button_0_2, button_1_2, button_2_2))
             {
+                HebeKaestchenHervor(button_0_2, button_1_2, button_2_2);
                 return true;
             }
 
@@ -138,11 +148,13 @@ namespace Tic_Tac_Toe
             //Gewinn Reihe Definition Diagonal
             else if (IstGleicherSpielstein(button_0_0, button_1_1, button_2_2))
             {
+                HebeKaestchenHervor(button_0_0, button_1_1, button_2_2);
                 return true;
             }
 
             else if (IstGleicherSpielstein(button_0_2, button_1_1, button_2_0))
             {
+                HebeKaestchenHervor(button_0_2, button_1_1, button_2_0);
                 return true;
             }
 
@@ -162,6 +174,13 @@ namespace Tic_Tac_Toe
             }
 
             return false;
+        }
+
+        private void HebeKaestchenHervor(Button erstesKaestchen,Button zweitesKaestchen,Button drittesKaestchen)
+        {
+            erstesKaestchen.Background = (Brush)new BrushConverter().ConvertFrom("#FFBDF000");
+            zweitesKaestchen.Background = (Brush)new BrushConverter().ConvertFrom("#FFBDF000");
+            drittesKaestchen.Background = (Brush)new BrushConverter().ConvertFrom("#FFBDF000");
         }
 
         private bool IstSpielfeldVoll()
@@ -228,11 +247,13 @@ namespace Tic_Tac_Toe
             button_2_2.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
 
 
+            //button_0_0.GewinnFarbe = (Brush)new BrushConverter().ConvertFrom("# FFDCE600");
+
 
         }
 
 
 
-        
+
     }
 }
