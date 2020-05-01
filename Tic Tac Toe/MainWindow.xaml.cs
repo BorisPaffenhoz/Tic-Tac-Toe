@@ -45,16 +45,9 @@ namespace Tic_Tac_Toe
                 _istErsterSpielerAmZug = true;
             }
 
-            if (button_0_0.Content!=null)
+            if (geklickterButtton.Content!= null && geklickterButtton.Content.ToString () !="")
             {
-                MessageBox.Show("Hallo Boris"+"{ button_0_0}","Hinweis");
-            }
-           
-
-            
-            if(geklickterButtton.Content!= null && geklickterButtton.Content.ToString() != "")
-            {
-                MessageBox.Show("Kästchen ist bereits belegt! Versuch ein anderes Kästchen anzuklicken","Hinweis", MessageBoxButton.OK,MessageBoxImage.Warning);
+                MessageBox.Show("Dieses Kästchen ist bereits belegt! Wähle ein anderes Kästchen");
                 return;
             }
 
@@ -67,13 +60,108 @@ namespace Tic_Tac_Toe
             else
             {
                 geklickterButtton.Content = "o";
+                var vordergrund = geklickterButtton.Foreground;
+                geklickterButtton.Foreground = geklickterButtton.Background;
+                geklickterButtton.Background = vordergrund;
                 _istErsterSpielerAmZug = true;
+            }
+
+            if (IstSpielGewonnen())
+            {
+                
+                if (_istErsterSpielerAmZug)
+                {
+                    MessageBox.Show("Spieler 1 (o) hat gewonnen!");
+                }
+
+                else
+                {
+                    MessageBox.Show("Spieler 2 (x) hat gewonnen");
+                }
+
+                StarteSpielNeu();
             }
 
             
 
-            
+        }
 
+        private bool StarteSpielNeu()
+        {
+            if (IstSpielGewonnen())
+            {
+                SpielfeldLeeren();
+                return true;
+                
+            }
+
+            return false;
+        }
+
+
+        private bool IstSpielGewonnen()
+        {
+            //Gewinn Reihen Definition Horizontal
+            if (IstGleicherSpielstein(button_0_0, button_0_1, button_0_2))
+            {
+                return true;
+            }
+
+            else if (IstGleicherSpielstein(button_1_0, button_1_1, button_1_2))
+            {
+                return true;
+            }
+
+            else if (IstGleicherSpielstein(button_2_0, button_2_1, button_2_2))
+            {
+                return true;
+            }
+
+
+            //Gewinn Reichen Definition Vertikal
+            else if (IstGleicherSpielstein(button_0_0, button_1_0, button_2_0))
+            {
+                return true;
+            }
+
+            else  if (IstGleicherSpielstein(button_0_1, button_1_1, button_2_1))
+            {
+                return true;
+            }
+
+            else if (IstGleicherSpielstein(button_0_2, button_1_2, button_2_2))
+            {
+                return true;
+            }
+
+
+            //Gewinn Reihe Definition Diagonal
+            else if (IstGleicherSpielstein(button_0_0, button_1_1, button_2_2))
+            {
+                return true;
+            }
+
+            else if (IstGleicherSpielstein(button_0_2, button_1_1, button_2_0))
+            {
+                return true;
+            }
+
+            return false;
+
+            
+            
+        }
+
+        private bool IstGleicherSpielstein(Button erstesKaestchen,Button zweitesKaestchen, Button drittesKaestchen)
+        {
+            if (erstesKaestchen.Content.ToString() != ""
+                && erstesKaestchen.Content.ToString() == zweitesKaestchen.Content.ToString()
+                && drittesKaestchen.Content.ToString() == zweitesKaestchen.Content.ToString())
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private bool IstSpielfeldVoll()
@@ -82,7 +170,7 @@ namespace Tic_Tac_Toe
             {
                 Button kaestchen = item as Button;
 
-                if(kaestchen !=null && kaestchen.Content == string.Empty)
+                if (kaestchen == null || kaestchen.Content.ToString() == "")
                 {
                     return false;
                 }
@@ -111,11 +199,40 @@ namespace Tic_Tac_Toe
             button_2_0.Content = string.Empty;
             button_2_1.Content = string.Empty;
             button_2_2.Content = string.Empty;
+
+
+            button_0_0.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_0_1.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_0_2.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+
+            button_1_0.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_1_1.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_1_2.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+
+            button_2_0.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_2_1.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+            button_2_2.Background = (Brush)new BrushConverter().ConvertFrom("#00A8C6");
+
+
+
+            button_0_0.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_0_1.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_0_2.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+                                                                           
+            button_1_0.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_1_1.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_1_2.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+                                                                           
+            button_2_0.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_2_1.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+            button_2_2.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
+
+
+
         }
 
-        //private void Aktiv()
-        //{
-        //    button_0_0.Content;
-        //}
+
+
+        
     }
 }
