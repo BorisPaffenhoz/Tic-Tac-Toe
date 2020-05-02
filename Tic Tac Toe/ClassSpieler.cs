@@ -8,12 +8,6 @@ namespace Tic_Tac_Toe
 {
     class ClassSpieler
     {
-
-        
-            
-
-            
-
-       
+  
     }
 }

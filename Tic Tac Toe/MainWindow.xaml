@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tic_Tac_Toe"
         mc:Ignorable="d"
         Title="Tic Tac Toe" Height="500" Width="500" Loaded="Window_Loaded">
-        
+
 
     <Window.Resources>
         <Style TargetType="Button">
@@ -31,16 +31,18 @@
 
         <!--Button Funktion erste Zeile-->
         <Button x:Name="button_0_0" Content="" Grid.Column="0"  Grid.Row="0" Click="Kaestchen_Click"/>
-                                                                             
+
         <Button x:Name="button_0_1" Content="" Grid.Column="1"  Grid.Row="0" Click="Kaestchen_Click" />
         <Button x:Name="button_0_2" Content="" Grid.Column="3"  Grid.Row="0" Click="Kaestchen_Click" />
-                                                                             
-        <!--Button Funktion zweite Zeile-->                                  
-        <Button x:Name="button_1_0" Content="" Grid.Column="0"  Grid.Row="1" Click="Kaestchen_Click" />
+
+        <!--Button Funktion zweite Zeile-->
+        <Button x:Name="button_1_0" Grid.Column="0"  Grid.Row="1" Click="Kaestchen_Click" >
+            <Label Content="" Height="100" Width="400"/>
+        </Button>
         <Button x:Name="button_1_1" Content="" Grid.Column="1"  Grid.Row="1" Click="Kaestchen_Click" />
         <Button x:Name="button_1_2" Content="" Grid.Column="3"  Grid.Row="1" Click="Kaestchen_Click" Background="#FF00A8C6" />
-                                                                              
-        <!--Button Funktion dritte Zeile-->                                   
+
+        <!--Button Funktion dritte Zeile-->
         <Button x:Name="button_2_0" Content="" Grid.Column="0"  Grid.Row="2" Click="Kaestchen_Click" />
         <Button x:Name="button_2_1" Content="" Grid.Column="1"  Grid.Row="2" Click="Kaestchen_Click" />
         <Button x:Name="button_2_2" Content="" Grid.Column="3"  Grid.Row="2" Click="Kaestchen_Click" />
