@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Data;
+using System.Windows.Media.TextFormatting;
+using System.Threading;
+using System.Timers;
 
 namespace Tic_Tac_Toe
 {
@@ -28,13 +31,14 @@ namespace Tic_Tac_Toe
         {
             InitializeComponent();
 
-           
+
         }
 
         //Button Farbe wird durchs anklicken geaendert
 
-       public  int i = 0;
-
+        public int i = 0;
+        private const bool V = true;
+        
         private void Kaestchen_Click(object sender, RoutedEventArgs e)
         {
             Button geklickterButtton = (Button)sender;
@@ -45,14 +49,20 @@ namespace Tic_Tac_Toe
                 _istErsterSpielerAmZug = true;
             }
 
-            if (geklickterButtton.Content!= null && geklickterButtton.Content.ToString () !="")
+            if (geklickterButtton.Content != null && geklickterButtton.Content.ToString() != "")
             {
-                MessageBox.Show("Dieses Kästchen ist bereits belegt! Wähle ein anderes Kästchen");
+                //Letzte verännderung !!!!!!!!!!
+                
+                Label1.Content = string.Empty;
+                string A = ("Kästchen ist belegt!");
+                Label1.Visibility = Visibility.Visible;
+                Label1.Content = A;
+                               
                 return;
             }
 
-            if(_istErsterSpielerAmZug)
-            { 
+            if (_istErsterSpielerAmZug)
+            {
                 geklickterButtton.Content = "x";
                 _istErsterSpielerAmZug = false;
             }
@@ -68,10 +78,10 @@ namespace Tic_Tac_Toe
 
             if (IstSpielGewonnen())
             {
-                
+
                 if (_istErsterSpielerAmZug)
                 {
-                    
+
 
                     MessageBox.Show("Spieler 1 (o) hat gewonnen!");
                 }
@@ -84,11 +94,11 @@ namespace Tic_Tac_Toe
                 StarteSpielNeu();
             }
 
-            
+
 
         }
 
-        
+      
 
         private bool StarteSpielNeu()
         {
@@ -191,6 +201,8 @@ namespace Tic_Tac_Toe
 
                 if (kaestchen == null || kaestchen.Content.ToString() == "")
                 {
+                    //Schaltet den Label auf verbergen
+                    Label1.Visibility = Visibility.Hidden;
                     return false;
                 }
             }
@@ -246,8 +258,8 @@ namespace Tic_Tac_Toe
             button_2_1.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
             button_2_2.Foreground = (Brush)new BrushConverter().ConvertFrom("#F9F2E7");
 
-
-            //button_0_0.GewinnFarbe = (Brush)new BrushConverter().ConvertFrom("# FFDCE600");
+            Label1.Content = string.Empty;
+            
 
 
         }
